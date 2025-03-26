@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="root.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script
+      src="https://kit.fontawesome.com/e49327de27.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+</head>
+
+<body>
+    <div class="container">
+        <!-- left container -->
+         
+        <div class="left-container">
+            <div class="left-container-header">
+                <div class="left-h1">
+                    <h2>CHAT SESSION</h2>
+                </div>
+                <div class="left-header-menu">
+                   <h2 class="menu-head" onclick="showOption()">Menu</h2>
+                    <div class="dropdown">
+                        <div class="dropdown-item" href="#">
+                            <select class="selectby" onchange="selectTheme(event)">
+                                <option value="">Change theme</option>
+                                <option value="">balck</option>
+                                <option value="">red</option>
+                                <option value="">blue</option>
+                                <option value="">green</option>
+                                <option value="">yellow</option>
+                                <option value="">grey</option>
+                                <option value="">plum</option>
+                                <option value="">navy</option>
+                                <option value="">pink</option>
+                                <option value="">purpule</option>
+                                <option value="">coral</option>
+                                <option value="">orange</option>
+                                <option value="">orange</option>
+                                <option value="">brown</option>
+                                <option value="">cyan</option>
+                                <option value="">maroon</option>
+                                <option value="">olive</option>
+                            </select>
+                        </div>
+                        <div class="dropdown-item" href="#">
+                            <select onchange="changeBackground(event)">
+                                <option value="">Change background</option>
+                                <option value="">image1</option>
+                                <option value="">image2</option>
+                                <option value="">image3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="left-user-container">
+                <div class="left-search-container">
+                    <input type="text" placeholder=" Search" oninput="serachUser(event)">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                 </div>
+                <div class="left-userlist">
+                    <!-- user 1 -->
+                    <div class="user-list">
+                        <div class="user-imgae">
+                            <img src="./assets/image1.avif" alt="">
+                        </div>
+                        <div class="user-details-left">
+                            <div class="user-name">
+                                <p class="title">John Mayers</p>
+                                <p class="time">3 min ago</p>
+                            </div>
+                            <div class="user-message">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- user 2 -->
+                    <div class="user-list">
+                        <div class="user-imgae">
+                            <img src="./assets/image2.webp" alt="">
+                        </div>
+                        <div class="user-details-left">
+                            <div class="user-name">
+                                <p class="title">Tony Stark</p>
+                                <p class="time">10 min ago</p>
+                            </div>
+                            <div class="user-message">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- user 3 -->
+                    <div class="user-list">
+                        <div class="user-imgae">
+                            <img src="./assets/image3.png" alt="">
+                        </div>
+                        <div class="user-details-left">
+                            <div class="user-name">
+                                <p class="title">S. Jphansson</p>
+                                <p class="time">4 min ago</p>
+                            </div>
+                            <div class="user-message">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- user 4 -->
+                    <div class="user-list">
+                        <div class="user-imgae">
+                            <img src="./assets/image4.webp" alt="">
+                        </div>
+                        <div class="user-details-left">
+                            <div class="user-name">
+                                <p class="title">Jeremy Renner</p>
+                                <p class="time">20 min ago</p>
+                            </div>
+                            <div class="user-message">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- user 5 -->
+                    <div class="user-list">
+                        <div class="user-imgae">
+                            <img src="./assets/image5.jpg" alt="">
+                        </div>
+                        <div class="user-details-left">
+                            <div class="user-name">
+                                <p class="title">Anthony Mackie</p>
+                                <p class="time">40 min ago</p>
+                            </div>
+                            <div class="user-message">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- user 6 -->
+                    <div class="user-list">
+                        <div class="user-imgae">
+                            <img src="./assets/image6.jpg" alt="">
+                        </div>
+                        <div class="user-details-left">
+                            <div class="user-name">
+                                <p class="title">Chris Evans</p>
+                                <p class="time">3 hour ago</p>
+                            </div>
+                            <div class="user-message">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- user 7 -->
+                    <div class="user-list">
+                        <div class="user-imgae">
+                            <img src="./assets/image7.avif" alt="">
+                        </div>
+                        <div class="user-details-left">
+                            <div class="user-name">
+                                <p class="title">Chris Hemswoth</p>
+                                <p class="time">a day ago</p>
+                            </div>
+                            <div class="user-message">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- user 8 -->
+                    <div class="user-list">
+                        <div class="user-imgae">
+                            <img src="./assets/image8.jpg" alt="">
+                        </div>
+                        <div class="user-details-left">
+                            <div class="user-name">
+                                <p class="title">Mark Ruffalo</p>
+                                <p class="time">4 min ago</p>
+                            </div>
+                            <div class="user-message">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- user 9 -->
+                    <div class="user-list">
+                        <div class="user-imgae">
+                            <img src="./assets/image9.jpg" alt="">
+                        </div>
+                        <div class="user-details-left">
+                            <div class="user-name">
+                                <p class="title">Tom Hiddleston</p>
+                                <p class="time">15 min ago</p>
+                            </div>
+                            <div class="user-message">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- user 10 -->
+                    <div class="user-list">
+                        <div class="user-imgae">
+                            <img src="./assets/image10.jpg" alt="">
+                        </div>
+                        <div class="user-details-left">
+                            <div class="user-name">
+                                <p class="title">Don Cheadle</p>
+                                <p class="time">2 min ago</p>
+                            </div>
+                            <div class="user-message">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- user 11 -->
+                    <div class="user-list">
+                        <div class="user-imgae">
+                            <img src="./assets/image11.jpg" alt="">
+                        </div>
+                        <div class="user-details-left">
+                            <div class="user-name">
+                                <p class="title">Stan Lee</p>
+                                <p class="time">50 min ago</p>
+                            </div>
+                            <div class="user-message">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- user 12 -->
+                    <div class="user-list">
+                        <div class="user-imgae">
+                            <img src="./assets/image12.jpg" alt="">
+                        </div>
+                        <div class="user-details-left">
+                            <div class="user-name">
+                                <p class="title">S.L. Jackson</p>
+                                <p class="time">11 min ago</p>
+                            </div>
+                            <div class="user-message">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="vertical-line"></div>
+
+        <!-- right container -->
+        <div class="right-container">
+            
+            <div class="right-container-header">
+                <div class="back-btn" onclick="goBack()">
+                    <i class="fa-solid fa-arrow-left"></i>
+                  </div>
+                <div class="right-h1">
+                    <h2>CHAT DETAILS</h2>
+                </div>
+                <div class="right-header-menu">
+                    <option>
+                        <h3>X</h3>
+                    </option>
+                </div>
+            </div>
+            <div class="right-chat-box">
+                
+                <div class="chat">
+
+                    <div class="user1-container">
+                        <p class="user1-message">Hi how are you</p>
+                    </div>
+                    <div class="user2-container">
+                        <p class="user2-message">Hi , my computer is not working since yesterday. I need the computer to
+                            rebbot my Iron Man suit.
+                            Could you please help me
+                        </p>
+                    </div>
+                    <div class="user1-container">
+                        <p class="user1-message">Sure! I will definitely help you width you query. Could you please
+                            confirm
+                            your email address?
+                        </p>
+                    </div> 
+                    <div class="user2-container">
+                        <p class="user2-message">example@gmail.com
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="right-input-container">
+                <div class="right-count">
+                    <span class="count-character">Current character : 0 and current Words : 0</span>
+                </div>
+                <div class="message-11">
+                    <input type="text" oninput="calculate(this)" id="messageInput" placeholder="Enter Your Message">
+                    <button class="right-send-btn" onClick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="userData.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</body>
+
+</html>
